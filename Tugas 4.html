@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Flexbox Example</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+
+        header {
+            background-color: purple;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            width: 100%;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 15px;
+            padding: 20px;
+            width: calc(100% - 40px);
+            margin: auto;
+        }
+
+        .box {
+            background-color: cyan;
+            padding: 20px;
+            width: calc(50% - 7.5px);
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .box:nth-child(5) {
+            width: calc(50% - 7.5px);
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        p {
+            font-size: 1em;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Sample flexbox example
+    </header>
+    <main>
+        <div class="container">
+            <article class="box"><h2>First article</h2><p>Content</p></article>
+            <article class="box"><h2>Second article</h2><p>Content</p></article>
+            <article class="box"><h2>Third article</h2><p>Content</p></article>
+            <article class="box"><h2>Fourth article</h2><p>Content</p></article>
+            <article class="box"><h2>Fifth article</h2><p>Content</p></article>
+        </div>
+    </main>
+</body>
+</html>
