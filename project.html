@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UswahHub</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Open+Sans&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'DM Sans', sans-serif;
+      background-color: #F5F5F5;
+    }
+
+    .navbar {
+      background-color: #F5F5F5;
+      color: #27374D;
+      border-radius: 50px;
+      padding: 12px 32px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: none;
+      margin: 0 auto 40px auto;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.05);
+    }
+
+    .navbar a {
+      color: #27374D;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    .hero {
+      background-color: #27374D;
+      color: white;
+      padding: 40px 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid;
+      flex-wrap: wrap;
+    }
+
+    .hero-left {
+      max-width: 50%;
+      text-align: center;
+    }
+
+    .hero-left h1 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-align: left;
+    }
+
+    .hero-left p {
+      font-size: 16px;
+      font-weight: 400;
+      margin-bottom: 30px;
+      color: #E5E5E5;
+      text-align: left;
+    }
+
+    .btn-jelajahi {
+      background-color: #F9D223;
+      color: #27374D;
+      font-weight: 600;
+      border: none;
+      padding: 12px 24px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+
+    .hero img {
+      max-width: 400px;
+      height: auto;
+    }
+
+    .about {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 90px 50px;
+      background: linear-gradient(to right, #FFFDEB, #FDF8DC);
+    }
+
+    .about img {
+      max-width: 380px;
+      height: auto;
+      border-radius: 20px;
+      margin-left: 60px;
+    }
+
+    .about-text {
+      max-width: 50%;
+      font-family: 'Open Sans', sans-serif;
+      color: #27374D;
+      text-align: left;
+    }
+
+    .about-text h2 {
+      font-size: 40px;
+      font-weight: 900;
+      color: #27374D;
+      margin-bottom: 30px;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+    }
+
+    .about-text p {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    .about-text strong {
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .features {
+      background-color: #27374D;
+      color: white;
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .features h2 {
+      font-size: 50px;
+      font-weight: 700;
+      color: #FFFFFF;
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 40px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .feature-card {
+      background-color: #A3D5FF;
+      color: #27374D;
+      border-radius: 70px;
+      padding: 50px 60px;
+      text-align: center;
+    }
+
+    .feature-card h3 {
+      font-size: 20px;
+      font-weight: 600;
+      font-family: 'Poppins', sans-serif;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      color: #E5E5E5;
+      text-shadow: 0px 5px 5px rgba(255, 255, 255, 0.4);
+    }
+
+    .feature-card p {
+      font-size: 18px;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+    .feature-card img {
+      height: 100px;
+      margin-bottom: 5px;
+    }
+
+    .testimonials {
+      background: linear-gradient(to bottom, #FFF4C2, #FFFFFF);
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .testimonials h2 {
+      font-size: 40px;
+      font-weight: 700;
+      color: #27374D;
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 40px;
+    }
+
+    .testimonial-cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 50px;
+    }
+
+    .testimonial-card {
+      background-color: #F0EFEF;
+      border-radius: 20px;
+      padding: 24px;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      max-width: 380px;
+      width: 100%;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .testimonial-card img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .testimonial-card strong {
+      display: block;
+      font-size: 16px;
+      color: #27374D;
+      font-family: 'DM Sans', Bold;
+      margin-bottom: 4px;
+      text-align: left;
+    }
+
+    .testimonial-card .stars {
+      color: #FFD700;
+      font-size: 16px;
+      margin-bottom: 8px;
+      text-align: left;
+    }
+
+    .testimonial-card p {
+      font-size: 14px;
+      color: #1E1E1E;
+      font-family: 'Open Sans', regular;
+      line-height: 1.5;
+      margin: 0;
+      text-align: left;
+    }
+
+    .faq {
+      background-color: #27374D;
+      color: white;
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .faq h2 {
+      font-size: 36px;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      margin-bottom: 40px;
+    }
+
+    .faq-item {
+      margin: 24px auto;
+      max-width: 800px;
+      text-align: left;
+    }
+
+    .faq-question {
+      background-color: #E5E5E5;
+      color: #27374D;
+      border-radius: 50px 50px 50px 50px;
+      padding: 10px 20px 10px 55px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      position: relative;
+    }
+
+    .faq-question img {
+      width: 70px;
+      height: 60px;
+      position: absolute;
+      left: -20px;
+      top: 30%;
+      transform: translateY(-50%);
+    }
+
+    .faq-question h3 {
+      font-size: 16px;
+      font-weight: 700;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+    }
+
+    .faq-answer {
+      background-color: #27374D;
+      color: #F5F5F5;
+      border-radius: 0 0 20px 20px;
+      padding: 5px;
+    }
+
+    .faq-answer p {
+      font-size: 14px;
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding-left: 30px;
+    }
+
+    .frame6-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 60px;
+      background: linear-gradient(to right, #FFF9DB, #FFFFFF);
+    }
+
+    .circle-overlap {
+      position: relative;
+      width: 400px;
+      height: 400px;
+    }
+
+    .circle-img {
+      position: absolute;
+      width: 185px;
+      height: 175px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .img1 {
+      top: 0;
+      left: 30px;
+      border-color: #27374D;
+      z-index: 2;
+    }
+
+    .img2 {
+      top: 0;
+      left: 230px;
+      border-color: #F9D223;
+      z-index: 3;
+    }
+
+    .img3 {
+      top: 90px;
+      left: 120px;
+      border-color: #A3D5FF;
+      z-index: 5;
+    }
+
+    .img4 {
+      top: 180px;
+      left: 30px;
+      border-color: #F9D223;
+      z-index: 2;
+    }
+
+    .img5 {
+      top: 180px;
+      left: 230px;
+      border-color: #27374D;
+      z-index: 1;
+    }
+
+    .frame6-text {
+      flex: 1;
+      padding-left: 60px;
+      max-width: 600px;
+      text-align: center;
+    }
+
+    .intro-text,
+    .sub-text {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 25px;
+      font-weight: 600;
+      color: #27374D;
+      margin-bottom: 35px;
+    }
+
+    .cta-button {
+      background-color: #F9D223;
+      color: #27374D;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #e0c01f;
+    }
+
+    .footer {
+      background-color: #27374D;
+      padding: 25px 0;
+      display: flex;
+      justify-content: center;
+    }
+  
+    .footer-box {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 5px;
+      padding: 16px 32px;
+      width: 90%;
+      max-width: none;
+      margin: 5px;
+    }
+  
+    .footer-text {
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 600;
+      font-size: 20px;
+      color: #27374D;
+      margin: 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <section class="hero">
+    <div class="navbar">
+      <div style="font-size: 20px; font-weight: 700;">UswahHub</div>
+      <div>
+        <a href="#">Masuk</a>
+        <a href="#">Daftar</a>
+      </div>
+    </div>
+
+    <div class="hero-left">
+      <h1>Konten Muslim, oleh Muslim, untuk semua yang ingin hidup lebih bermakna</h1>
+      <p>Terinspirasi, Terhubung, dan Tumbuh dalam Kebaikan</p>
+      <a href="#" class="btn-jelajahi">Mulai Jelajahi</a>
+    </div>
+    <img src="image-frame1.png" alt="Hero Image">
+  </section>
+
+  <section class="about">
+    <img src="image-frame2.png" alt="Tentang UswahHub">
+    <div class="about-text">
+      <h2>UswahHub</h2>
+      <p>Platform yang menghubungkan komunitas Muslim untuk berbagi inspirasi, pengetahuan, dan kebaikan dalam suasana Islami. Dengan visi menjadi pusat keteladanan, <strong>UswahHub</strong> menghadirkan konten bermanfaat, interaksi positif, serta ruang eksplorasi dan komunitas yang mendukung pertumbuhan dalam kebaikan.</p>
+    </div>
+  </section>
+
+  <section class="features">
+    <h2>Features</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <img src="icon-home.png" alt="Beranda">
+        <h3>Beranda</h3>
+        <p>Temukan inspirasi dari konten terbaru, trending, dan yang paling relevan untukmu.</p>
+      </div>
+      <div class="feature-card">
+        <img src="icon-explore.png" alt="Eksplorasi">
+        <h3>Eksplorasi Kategori</h3>
+        <p>Jelajahi topik Islami sesuai minatmu, dari spiritual hingga gaya hidup.</p>
+      </div>
+      <div class="feature-card">
+        <img src="icon-upload.png" alt="Unggah">
+        <h3>Unggah & Interaksi Konten</h3>
+        <p>Bagikan kebaikan lewat foto atau video, dan berinteraksilah lewat like & komentar.</p>
+      </div>
+      <div class="feature-card">
+        <img src="icon-bookmark.png" alt="Bookmark">
+        <h3>Bookmark & Personalisasi</h3>
+        <p>Simpan konten favoritmu dan nikmati pengalaman eksplorasi yang sesuai denganmu.</p>
+      </div>
+      <div class="feature-card">
+        <img src="icon-community.png" alt="Komunitas">
+        <h3>Komunitas</h3>
+        <p>Tumbuh bersama lewat tantangan dan forum yang positif dan suportif.</p>
+      </div>
+      <div class="feature-card">
+        <img src="icon-profile.png" alt="Akun">
+        <h3>Profil & Akun Pribadi</h3>
+        <p>Atur identitas digitalmu, lihat unggahanmu, dan kelola aktivitasmu di UswahHub.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonials">
+    <h2>Testimonials</h2>
+    <div class="testimonial-cards">
+      <div class="testimonial-card">
+        <img src="avatar-maya.png" alt="Maya Kurnia">
+        <div>
+          <strong>Maya Kurnia</strong>
+          <div class="stars">⭐⭐⭐⭐</div>
+          <p>Keren dan bermanfaat! Semoga lebih baik kedepannya yaa..</p>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <img src="avatar-anita.png" alt="Anita Sari">
+        <div>
+          <strong>Anita Sari</strong>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>So inspiring and insightful, keep going!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <div class="faq-question">
+        <img src="icon-faq.png" alt="FAQ Icon">
+        <h3>Apa saja yang bisa saya lakukan di UswahHub?</h3>
+      </div>
+      <div class="faq-answer">
+        <p>Kamu bisa mengeksplorasi konten, mengunggah foto/video, memberi like, bergabung dalam komunitas, dan ikut serta dalam tantangan.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        <img src="icon-faq.png" alt="FAQ Icon">
+        <h3>Siapa saja yang bisa menggunakan UswahHub?</h3>
+      </div>
+      <div class="faq-answer">
+        <p>Siapa pun yang ingin terhubung dalam komunitas Muslim dan berbagi kebaikan dapat bergabung, baik individu maupun komunitas.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-question">
+        <img src="icon-faq.png" alt="FAQ Icon">
+        <h3>Bagaimana cara bergabung dengan komunitas?</h3>
+      </div>
+      <div class="faq-answer">
+        <p>Masuk ke menu Komunitas, pilih topik atau tantangan yang sesuai minat, lalu klik Gabung.</p>
+      </div>  
+    </div>
+  </section>
+
+  <div class="frame6-container">
+    <div class="circle-overlap">
+      <img src="img1.png" alt="Gambar 1" class="circle-img img1">
+      <img src="img2.png" alt="Gambar 2" class="circle-img img2">
+      <img src="img3.png" alt="Gambar Tengah" class="circle-img img3">
+      <img src="img4.png" alt="Gambar 4" class="circle-img img4">
+      <img src="img5.png" alt="Gambar 5" class="circle-img img5">
+    </div>
+    <div class="frame6-text">
+      <p class="intro-text">
+        Eksplor Inspirasi Islami tentang Busana, Makanan Halal, Destinasi, Gaya Hidup, dan Kisah Komunitas Muslim
+      </p>
+      <p class="sub-text">
+        Mulai dari apa yang kamu butuhkan hari ini—semua dari UswahHub!
+      </p>
+      <button class="cta-button">Coba Sekarang</button>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-box">
+      <p class="footer-text">&copy; 2025 UswahHub. All rights reserved.</p>
+    </div>
+  </footer>   
+</body>
+</html>
